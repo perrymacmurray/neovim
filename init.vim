@@ -7,26 +7,32 @@ endif
 
 call plug#begin("~/.config/nvim/plugins")
 
+"Utility
+Plug 'ggandor/leap.nvim'
+
+"Style
 Plug 'Mofiqul/vscode.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-tree/nvim-web-devicons'
-Plug 'ggandor/leap.nvim'
+
+" Syntax highlighting
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 call plug#end()
 
 lua require("config")
 
 "Begin initialization
-set nocompatible            " disable compatibility to old-time vi
-set showmatch               " show matching brackets.
-set ignorecase              " case insensitive matching
-set mouse=v                 " middle-click paste with mouse
-set hlsearch                " highlight search results
-set autoindent              " indent a new line the same amount as the line just typed
-set number                  " add line numbers
-set wildmode=longest,list   " get bash-like tab completions
-filetype plugin indent on   " allows auto-indenting depending on file type
-set tabstop=4               " number of columns occupied by a tab character
-set expandtab               " convert tabs to white space
-set shiftwidth=4            " width for autoindents
-set softtabstop=4           " see multiple spaces as tabstops so <BS> does the right thing
+set nocompatible
+set showmatch
+set ignorecase
+set mouse=v " middle-click paste with mouse
+set hlsearch
+set autoindent
+set number " line numbers
+set wildmode=longest,list " bash-like tab completions
+filetype plugin indent on
+set tabstop=2
+set expandtab
+set shiftwidth=2
+set softtabstop=2
