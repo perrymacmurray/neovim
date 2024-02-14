@@ -23,7 +23,7 @@ call plug#end()
 lua require("config")
 
 " Load Qualcomm configs (if present)
-if filereadable('qualcomm.vim')
+if filereadable('/usr2/pmacmurr/.config/nvim/qualcomm.vim')
   source qualcomm.vim
 endif
 
