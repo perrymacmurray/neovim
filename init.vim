@@ -1,4 +1,4 @@
-"Vim-plug installation
+" Vim-plug installation
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
   silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
@@ -7,10 +7,10 @@ endif
 
 call plug#begin("~/.config/nvim/plugins")
 
-"Utility
+" Utility
 Plug 'ggandor/leap.nvim'
 
-"Style
+" Style
 Plug 'Mofiqul/vscode.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-tree/nvim-web-devicons'
@@ -22,7 +22,12 @@ call plug#end()
 
 lua require("config")
 
-"Begin initialization
+" Load Qualcomm configs (if present)
+if filereadable('qualcomm.vim')
+  source qualcomm.vim
+endif
+
+" Various settings
 set nocompatible
 set showmatch
 set ignorecase
