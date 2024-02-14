@@ -17,6 +17,7 @@ Plug 'nvim-tree/nvim-web-devicons'
 
 " Syntax highlighting
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'dense-analysis/ale'
 
 call plug#end()
 
