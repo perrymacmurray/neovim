@@ -7,3 +7,6 @@ require("lualine").setup({
   theme = 'vscode',
   icons_enabled = true
 })
+
+-- syntax highlighting
+require('treesitter')
