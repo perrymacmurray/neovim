@@ -24,7 +24,7 @@ lua require("config")
 
 " Load Qualcomm configs (if present)
 if filereadable('/usr2/pmacmurr/.config/nvim/qualcomm.vim')
-  source qualcomm.vim
+  source /usr2/pmacmurr/.config/nvim/qualcomm.vim
 endif
 
 " Various settings
