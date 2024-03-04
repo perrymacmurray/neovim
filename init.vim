@@ -22,6 +22,8 @@ Plug 'dense-analysis/ale'
 
 call plug#end()
 
+runtime *-extras/init-before.vim " Initialization of extras that MUST take place immediately after plugin loading
+
 " ALE: disable cc linter (this syntax doesn't work in lua)
 let g:ale_linters_ignore = {
 \ 'c': ['cc'],
@@ -30,10 +32,7 @@ let g:ale_linters_ignore = {
 
 lua require("config")
 
-" Load Qualcomm configs (if present)
-if filereadable('/usr2/pmacmurr/.config/nvim/qualcomm.vim')
-  source /usr2/pmacmurr/.config/nvim/qualcomm.vim
-endif
+runtime *-extras/init.vim " Normal initialization of extras, after requires (extras should load their own lua)
 
 " Various settings
 set nocompatible
