@@ -1,5 +1,6 @@
 -- utility
 require('leap').add_default_mappings()
+require('blame')
 
 -- style
 require("colors")
