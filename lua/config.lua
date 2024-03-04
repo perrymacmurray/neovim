@@ -10,3 +10,4 @@ require("lualine").setup({
 
 -- syntax highlighting
 require('treesitter')
+require('ale')

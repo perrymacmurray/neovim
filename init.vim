@@ -9,6 +9,7 @@ call plug#begin("~/.config/nvim/plugins")
 
 " Utility
 Plug 'ggandor/leap.nvim'
+Plug 'f-person/git-blame.nvim'
 
 " Style
 Plug 'Mofiqul/vscode.nvim'
@@ -21,6 +22,12 @@ Plug 'dense-analysis/ale'
 
 call plug#end()
 
+" ALE: disable cc linter (this syntax doesn't work in lua)
+let g:ale_linters_ignore = {
+\ 'c': ['cc'],
+\ 'cpp': ['cc'],
+\}
+
 lua require("config")
 
 " Load Qualcomm configs (if present)
@@ -32,7 +39,7 @@ endif
 set nocompatible
 set showmatch
 set ignorecase
-set mouse=v " middle-click paste with mouse
+set mouse=a
 set hlsearch
 set autoindent
 set number " line numbers
