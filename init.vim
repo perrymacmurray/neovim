@@ -28,6 +28,7 @@ runtime *-extras/init-before.vim " Initialization of extras that MUST take place
 let g:ale_linters_ignore = {
 \ 'c': ['cc'],
 \ 'cpp': ['cc'],
+\ 'python' : ['flake8'],
 \}
 
 lua require("config")
