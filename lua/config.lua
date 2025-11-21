@@ -1,14 +1,14 @@
 -- utility
-require('leap').add_default_mappings()
-require('blame')
+require('leap')
+require('blame_config')
 
 -- style
-require("colors")
+require("colors_config")
 require("lualine").setup({
   theme = 'vscode',
   icons_enabled = true
 })
 
 -- syntax highlighting
-require('treesitter')
-require('ale')
+require('treesitter_config')
+require('ale_config')
